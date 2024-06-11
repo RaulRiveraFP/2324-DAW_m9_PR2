@@ -1,120 +1,484 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/e05bfa18e4.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-secondary bg-secondary h-25">
-            <div class="container">
-                <div class="row  d-flex align-items-center">
-                    <div class="col-3">
-                        <a class="navbar-brand w-25" href="index.html"><img src="img/logo.svg"  class="w-25 me-4" alt="logo">Vanilla games</a>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/yeti/bootstrap.min.css"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+
+        <link rel="stylesheet" href="styles.css" />
+        <title>Prototipos vanilla games</title>
+
+        <style>
+            /* Modificamos aspecto de nav-tabs y nav-links */
+            .nav-tabs,
+            .nav-link.active {
+                border-bottom: 0;
+                /* background-color: red; */
+            }
+        </style>
+    </head>
+    <body class="pt-5" style="overflow-x: hidden; padding-bottom: 100px">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#"
+                        ><img
+                            src="./img/logo.svg"
+                            alt=""
+                            width="30"
+                            height="24"
+                            class="d-inline-block align-text-top"
+                        />
+
+                        Vanilla Games</a
+                    >
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="proyectos.html">TOP5 Proyectos</a>                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">A cerca de</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">PROYECTOS</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <img src="./img/avatar.svg" alt="" width="25" />
+                                </a>
+                                <ul class="dropdown-menu me-0" style="left: -100px; width: 100px">
+                                    <li class="text-light text-center p-2">
+                                        <p>user@email.com</p>
+                                    </li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" href="#">Acciónn</a></li>
+                                    <li><a class="dropdown-item" href="#">Otra acción</a></li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="offset-1 col-3">
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav d-flex gap-2">
-                                <a class="nav-item nav-link" href="#">Home</a>
-                                <a class="nav-item nav-link" href="#">Top 5</a>
-                                <a class="nav-item nav-link" href="#">Acerca</a>
-                                <a class="nav-item nav-link" href="miperfil.html">Mi Perfil</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <h1 class="mt-5">Proyectos</h1>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item w-50">
+                                <a class="nav-link active" aria-current="page" href="#"
+                                    >Todos los proyectos</a
+                                >
+                            </li>
+                            <li class="nav-item w-50">
+                                <a class="nav-link" href="#">Mis proyectos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border border-top-0 p-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 mb-3">
+                            <button class="btn btn-primary w-100">Subir proyecto</button>
+                        </div>
+                        <div class="d-flex col-12 col-sm-8 mb-3">
+                            <button class="btn btn-secondary me-2">
+                                <i class="bi bi-grid-3x3-gap"></i>
+                            </button>
+                            <button class="btn btn-secondary me-2">
+                                <i class="bi bi-list"></i>
+                            </button>
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text" id="addon-wrapping"
+                                    ><i class="bi bi-search"></i
+                                ></span>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Buscador"
+                                    aria-label="Username"
+                                    aria-describedby="addon-wrapping"
+                                />
+                                <span class="input-group-text" id="addon-wrapping"
+                                    ><i class="bi bi-x"></i
+                                ></span>
                             </div>
                         </div>
                     </div>
-                    <div class="offset-2 col-3">
-                        <button type="button" class="btn btn-success"><a href="iniciarSesion.html" class="btn btn-success">Iniciar</a></button>
-                        <button type="button" class="btn btn-secondary border btn-outline-light"><a href="registro.html" class="text-light text-decoration-none"> Regístrate </a></button>
+                    <!-- tabla -->
+                    <div class="col-12 d-none d-xl-block" style="overflow-x: auto">
+                        <table
+                            class="table table-hover align-middle mt-3"
+                            style="min-width: 1000px"
+                        >
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>
+                                        Nombre <span><i class="bi bi-caret-down"></i></span>
+                                    </th>
+                                    <th>
+                                        Descripción <span><i class="bi bi-caret-up"></i></span>
+                                    </th>
+                                    <th>
+                                        Enlace <span><i class="bi bi-caret-up"></i></span>
+                                    </th>
+                                    <th>Repositorio</th>
+                                    <th>
+                                        Autor <span><i class="bi bi-caret-up"></i></span>
+                                    </th>
+                                    <th>
+                                        Fecha <span><i class="bi bi-caret-up"></i></span>
+                                    </th>
+                                    <th>
+                                        Estado <span><i class="bi bi-caret-up"></i></span>
+                                    </th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                
+                                    <td>
+                                        <div class="containerImagen">
+                                            <img width="200px" src="./img/pro.avif" alt="" />
+                                        </div>
+                                    </td>
+                                    <td><a href="detalle.html">Detalle</a></td>
+                                    <td>Ejemplo de web para centro fp</td>
+                                    <td><a href="http://www.fpllefia.con">http://www.fpllefia.con</a></td>
+                                    <td><a href="#">carrebola.github.com/juego1</a></td>
+                                    <td>carlos</td>
+                                    <td>13/12/2021</td>
+                                    <td>test</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="containerImagen">
+                                        <img width="200px" src="./img/pro.avif" alt="" />
+                                    </div>
+                                </td>
+                                <td>Proyecto ejemplo 1</td>
+                                <td>Ejemplo de web para centro fp</td>
+                                <td><a href="http://www.fpllefia.con">http://www.fpllefia.con</a></td>
+                                <td><a href="#">carrebola.github.com/juego1</a></td>
+                                <td>carlos</td>
+                                <td>13/12/2021</td>
+                                <td>?</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="containerImagen">
+                                        <img width="200px" src="./img/pro.avif" alt="" />
+                                    </div>
+                                </td>
+                                <td>Proyecto ejemplo 1</td>
+                                <td>Ejemplo de web para centro fp</td>
+                                <td><a href="http://www.fpllefia.con">http://www.fpllefia.con</a></td>
+                                <td><a href="#">carrebola.github.com/juego1</a></td>
+                                <td>carlos</td>
+                                <td>13/12/2021</td>
+                                <td>?</td>
+                            </tr>
+                        </table>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <!-- tarjetas -->
+
+                    <div class="d-xl-none row">
+                        <!-- tarjeta  -->
+                        <div class="col-12 col-lg-6">
+                            <a href="detalle.html">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div
+                                        class="col-4"
+                                        style="
+                                            background-image: url(./img/juego.jpg);
+                                            background-position: center;
+                                            background-size: cover;
+                                        "
+                                    ></div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tetris</h5>
+                                            <p class="card-text">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
+                                                quos, quae atque rerum quibusdam
+                                            </p>
+                                            <p class="small m-0 text-end text-italic">Autor: Carlos Arrebola</p>
+                                            <p class="small text-end text-italic">Fecha: 12/12/2023</p>
+
+                                            <a class="btn btn-sm btn-outline-primary" href="#">Enlace</a>
+                                            <a class="btn btn-sm btn-outline-primary" href="#">Repo</a>
+                                            <a class="btn btn-sm btn-success" href="#">Estado</a>
+                                            <a
+                                                class="d-none d-sm-inline btn btn-sm btn-outline-primary bi bi-pencil"
+                                            ></a>
+                                            <a
+                                                class="d-none d-sm-inline btn btn-sm btn-outline-danger bi bi-trash3"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- tarjeta  -->
+                        <div class="col-12 col-lg-6">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div
+                                        class="col-4"
+                                        style="
+                                            background-image: url(./img/juego.jpg);
+                                            background-position: center;
+                                            background-size: cover;
+                                        "
+                                    ></div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tetris</h5>
+                                            <p class="card-text">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
+                                                quos, quae atque rerum quibusdam
+                                            </p>
+                                            <p class="small m-0 text-end text-italic">Autor: Carlos Arrebola</p>
+                                            <p class="small text-end text-italic">Fecha: 12/12/2023</p>
+
+                                            <a class="btn btn-sm btn-outline-primary" href="#">Enlace</a>
+                                            <a class="btn btn-sm btn-outline-primary" href="#">Repo</a>
+                                            <a class="btn btn-sm btn-success" href="#">Estado</a>
+                                            <a
+                                                class="d-none d-sm-inline btn btn-sm btn-outline-primary bi bi-pencil"
+                                            ></a>
+                                            <a
+                                                class="d-none d-sm-inline btn btn-sm btn-outline-danger bi bi-trash3"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tarjeta  -->
+                        <div class="col-12 col-lg-6">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div
+                                        class="col-4"
+                                        style="
+                                            background-image: url(./img/juego.jpg);
+                                            background-position: center;
+                                            background-size: cover;
+                                        "
+                                    ></div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tetris</h5>
+                                            <p class="card-text">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
+                                                quos, quae atque rerum quibusdam
+                                            </p>
+                                            <p class="small m-0 text-end text-italic">Autor: Carlos Arrebola</p>
+                                            <p class="small text-end text-italic">Fecha: 12/12/2023</p>
+
+                                            <a class="btn btn-sm btn-outline-primary" href="#">Enlace</a>
+                                            <a class="btn btn-sm btn-outline-primary" href="#">Repo</a>
+                                            <a class="btn btn-sm btn-success" href="#">Estado</a>
+                                            <a
+                                                class="d-none d-sm-inline btn btn-sm btn-outline-primary bi bi-pencil"
+                                            ></a>
+                                            <a
+                                                class="d-none d-sm-inline btn btn-sm btn-outline-danger bi bi-trash3"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tarjeta  -->
+                        <div class="col-12 col-lg-6">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div
+                                        class="col-4"
+                                        style="
+                                            background-image: url(./img/pro.avif);
+                                            background-position: center;
+                                            background-size: cover;
+                                        "
+                                    ></div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tetris</h5>
+                                            <p class="card-text">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
+                                                quos, quae atque rerum quibusdam
+                                            </p>
+                                            <p class="small m-0 text-end text-italic">Autor: Carlos Arrebola</p>
+                                            <p class="small text-end text-italic">Fecha: 12/12/2023</p>
+
+                                            <a class="btn btn-sm btn-outline-primary" href="#">Enlace</a>
+                                            <a class="btn btn-sm btn-outline-primary" href="#">Repo</a>
+                                            <a class="btn btn-sm btn-success" href="#">Estado</a>
+                                            <a
+                                                class="d-none d-sm-inline btn btn-sm btn-outline-primary bi bi-pencil"
+                                            ></a>
+                                            <a
+                                                class="d-none d-sm-inline btn btn-sm btn-outline-danger bi bi-trash3"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tarjeta  -->
+                        <div class="col-12 col-lg-6">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div
+                                        class="col-4"
+                                        style="
+                                            background-image: url(./img/pro.avif);
+                                            background-position: center;
+                                            background-size: cover;
+                                        "
+                                    ></div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tetris</h5>
+                                            <p class="card-text">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
+                                                quos, quae atque rerum quibusdam
+                                            </p>
+                                            <p class="small m-0 text-end text-italic">Autor: Carlos Arrebola</p>
+                                            <p class="small text-end text-italic">Fecha: 12/12/2023</p>
+
+                                            <a class="btn btn-sm btn-outline-primary" href="#">Enlace</a>
+                                            <a class="btn btn-sm btn-outline-primary" href="#">Repo</a>
+                                            <a class="btn btn-sm btn-success" href="#">Estado</a>
+                                            <a
+                                                class="d-none d-sm-inline btn btn-sm btn-outline-primary bi bi-pencil"
+                                            ></a>
+                                            <a
+                                                class="d-none d-sm-inline btn btn-sm btn-outline-danger bi bi-trash3"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tarjeta  -->
+                        <div class="col-12 col-lg-6">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div
+                                        class="col-4"
+                                        style="
+                                            background-image: url(.images/pro.avif);
+                                            background-position: center;
+                                            background-size: cover;
+                                        "
+                                    ></div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tetris</h5>
+                                            <p class="card-text">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
+                                                quos, quae atque rerum quibusdam
+                                            </p>
+                                            <p class="small m-0 text-end text-italic">Autor: Carlos Arrebola</p>
+                                            <p class="small text-end text-italic">Fecha: 12/12/2023</p>
+
+                                            <a class="btn btn-sm btn-outline-primary" href="#">Enlace</a>
+                                            <a class="btn btn-sm btn-outline-primary" href="#">Repo</a>
+                                            <a class="btn btn-sm btn-success" href="#">Estado</a>
+                                            <a
+                                                class="d-none d-sm-inline btn btn-sm btn-outline-primary bi bi-pencil"
+                                            ></a>
+                                            <a
+                                                class="d-none d-sm-inline btn btn-sm btn-outline-danger bi bi-trash3"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-          </nav>
-    </header>
-    <main class="container">
-        <h1 class="h1 m-5">Proyectos</h1>
-        <div class="grid pb-5">
-            <div class="row border border-1px pb-5">
-                <div class="col-6 border border-1 bg-light p-2"><a href="" class="text-info text-decoration-none">Todos los proyectos</a></div>
-                <div class="col-6 p-2"><a href="" class="text-decoration-none ">Mis proyectos</a></div>
-                <div class="col-4">
-                    <button class="mt-3 btn btn-info w-100"><a class="text-light text-decoration-none" href="subirProyectos.html">Subir proyecto</a></button>
+        </main>
+        <footer class="">
+            <nav class="navbar bg-secondary fixed-bottom small">
+                <div class="container">
+                    <a class="navbar-brand" href="http://www.fpllefia.com">
+                        <img
+                            src="./img/logo.svg"
+                            alt="fpllefia"
+                            width="30"
+                            height="24"
+                            class="d-inline-block align-text-top"
+                        />
+                        FPLlefià
+                    </a>
+                    <span class="navbar-text">@Texto de header</span>
+                    <a href="#" class="nav-link">Vínculo header</a>
                 </div>
-                <div class="col-1 d-flex align-items-center">
-                    <i class="fa-solid fa-table-cells"></i>
-                </div>
-                <div class="col-1 d-flex align-items-center ">
-                    <i class="fa-solid fa-arrow-up-wide-short"></i>
-                </div>
-                <div class="col-6 d-flex align-items-center">
-                    <i class="fa-solid fa-magnifying-glass p-3 bg-light"></i>
-                    <input type="text"class="w-75 h-75">
-                    <i class="fa-solid fa-x p-3 bg-light"></i>
-                </div>
-                <div class="row-border row mt-5 pb-3 border-bottom border-2px border-dark">
-                    <div class="col-2 ">Nombre <i class="fa-solid fa-caret-down"></i></div>
-                    <div class="col-2 ">Descripción <i class="fa-solid fa-caret-down"></i></div>
-                    <div class="col-2">Enlace <i class="fa-solid fa-caret-down"></i></div>
-                    <div class="col-2">Repositorio <i class="fa-solid fa-caret-down"></i></div>
-                    <div class="col-2">Autor <i class="fa-solid fa-caret-down"></i> Fecha <i class="fa-solid fa-caret-down"></i></div>
-                    <div class="col-2">Estado <i class="fa-solid fa-caret-down"></i></div>
-                </div>
-                <div class="row mt-3 p-2 border-bottom border-1px">
-                    <div class="col-1"><a href="detalle.html"><img src="img/pro.avif" alt="" style="width:75px; height:75px;"></a></div>
-                    <div class="col-1"><a href="detalle.html" class="text-decoration-none text-dark"> Proyecto ejemplo 1</a></div>
-                    <div class="col-2">Ejemplo de web para centro fp</div>
-                    <div class="col-2"><a href="https://fpllefia.com">https://fpllefia.com</a></div>
-                    <div class="col-2"><a href="https://carrebola/juego1.com">carrebola/juego1.com</a></div>
-                    <div class="col-1">Carlos</div>
-                    <div class="col-1">23/10/2023</div>
-                    <div class="col-1"><i class="text-center fa-solid fa-pencil" style="color: #00ccff; border:1px solid #00ccff; padding:5px;"></i></div>
-                    <div class="col-1"><i class="fa-solid fa-trash-can" style="color: #ff0000; border:1px solid #ff0000; padding: 5px;"></i></div>
-                </div>
-                <div class="row mt-3 p-2 border-bottom border-1px">
-                    <div class="col-1"><img src="img/pro.avif" alt="" style="width:75px; height:75px;"></div>
-                    <div class="col-1">Proyecto ejemplo 1</div>
-                    <div class="col-2">Ejemplo de web para centro fp</div>
-                    <div class="col-2"><a href="https://fpllefia.com">https://fpllefia.com</a></div>
-                    <div class="col-2"><a href="https://carrebola/juego1.com">carrebola/juego1.com</a></div>
-                    <div class="col-1">Carlos</div>
-                    <div class="col-1">23/10/2023</div>
-                    <div class="col-1"><i class="fa-solid fa-pencil" style="color: #00ccff; border:1px solid #00ccff; padding:5px;"></i></div>
-                    <div class="col-1"><i class="fa-solid fa-trash-can" style="color: #ff0000; border:1px solid #ff0000; padding: 5px;"></i></div>
-                </div>
-                <div class="row mt-3 p-2 border-bottom border-1px">
-                    <div class="col-1"><img src="img/pro.avif" alt="" style="width:75px; height:75px;"></div>
-                    <div class="col-1">Proyecto ejemplo 1</div>
-                    <div class="col-2">Ejemplo de web para centro fp</div>
-                    <div class="col-2"><a href="https://fpllefia.com">https://fpllefia.com</a></div>
-                    <div class="col-2"><a href="https://carrebola/juego1.com">carrebola/juego1.com</a></div>
-                    <div class="col-1">Carlos</div>
-                    <div class="col-1">23/10/2023</div>
-                    <div class="col-1"><i class="fa-solid fa-pencil" style="color: #00ccff; border:1px solid #00ccff; padding:5px;"></i></div>
-                    <div class="col-1"><i class="fa-solid fa-trash-can" style="color: #ff0000; border:1px solid #ff0000; padding: 5px;"></i></div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer class="bg-secondary h-25 container-fluid p-4 position-sticky bottom-0">
-        <div class="row d-flex align-items-center">
-            <div class="left d-flex col-4 justify-content-center align-items-center gap-2">
-                <img src="img/logo.svg" alt="logo" style="width:50px;">
-                <p>FP Llefià</p>
-            </div>
-            <div class="center d-flex col-4 justify-content-center align-items-center">
-                <p>DAW2- Asignatura de proyectos</p>
-            </div>
-            <div class="right d-flex col-4 justify-content-center align-items-center">
-                <p>carrebolaGithub</p>
-            </div>
-        </div>
-    </footer>
-</body>
+            </nav>
+        </footer>
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
+
+

@@ -1,77 +1,176 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/e05bfa18e4.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-secondary bg-secondary h-25">
-            <div class="container">
-                <div class="row  d-flex align-items-center">
-                    <div class="col-3">
-                        <a class="navbar-brand w-25" href="index.html"><img src="img/logo.svg"  class="w-25 me-4" alt="logo">Vanilla games</a>
-                    </div>
-                    <div class="offset-1 col-3">
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav d-flex gap-2">
-                                <a class="nav-item nav-link" href="#">Home</a>
-                                <a class="nav-item nav-link" href="#">Top 5</a>
-                                <a class="nav-item nav-link" href="#">Acerca</a>
-                                <a class="nav-item nav-link" href="miperfil.html">Mi Perfil</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="offset-2 col-3">
-                        <button type="button" class="btn btn-success"><a href="iniciarSesion.html" class="btn btn-success">Iniciar <i class="fa-solid fa-right-to-bracket"></i></a></button>
-                        <button type="button" class="btn btn-secondary border btn-outline-light"><a href="registro.html" class="text-light text-decoration-none"> Regístrate <i class="fa-solid fa-right-to-bracket"></i></a></button>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-            </div>
-          </nav>
-    </header>
-    <main class="container">
-        <h1 class="h1 m-5">Detalle del proyecto</h1>
-        <div class="text-end w-100"><a href="proyectos.html" class="text-decoration-none text-secondary border border-1px border-secondary p-2"><i class="fa-solid fa-chevron-left"></i> Volver</a></div>
-        <div class="row mt-5">
-            <div class="col-5">
-                <img src="img/pro.avif" alt="imagen proyecto" class="w-100">
-                <label for="foto" class="fw-bold mt-3">URL imagen</label>
-                <input type="text" name="foto" placeholder="http://urldelaimagen.com">
-            </div>
-            <div class="col-7 mb-5">
-                <strong>Nombre: </strong>  <br> <br> <input type="text" placeholder="Nombre autor" id="">  <br> <br> 
-                <strong>Descripción: </strong>  <br> <br> <input type="text-area" placeholder="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam similique dicta autem. A, optio culpa distinctio veritatis, aperiam cumque error suscipit nobis id animi nesciunt dicta architecto nulla reprehenderit magnam." id=""><br> <br>
-                <strong>Estado: </strong>  <br> <br> <input type="text" placeholder="Estado" id="">  <br> <br> 
-                <strong>Fecha: </strong>  <br> <br> <input type="text" placeholder="dd/mm/aaaa" id="">  <br> <br> 
-                <strong>Enlace: </strong>  <br> <br> <input type="text" placeholder="http://enlace.com" id="">  <br> <br> 
-                <strong>Repositorio: </strong>  <br> <br> <input type="text" placeholder="http://enlace.github.com" id="">  <br> <br> 
-                <button class="btn btn-success"><a href="detalle.html" class="text-light text-decoration-none"> Subir proyecto</a></button>
-            </div>
-        </div>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    </main>
-    <footer class="bg-secondary h-25 container-fluid p-4 position-sticky bottom-0">
-        <div class="row d-flex align-items-center">
-            <div class="left d-flex col-4 justify-content-center align-items-center gap-2">
-                <img src="img/logo.svg" alt="logo" style="width:50px;">
-                <p>FP Llefià</p>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/yeti/bootstrap.min.css"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+
+        <link rel="stylesheet" href="styles.css" />
+        <title>Prototipos vanilla games</title>
+
+        <style>
+            /* Modificamos aspecto de nav-tabs y nav-links */
+            .nav-tabs,
+            .nav-link.active {
+                border-bottom: 0;
+                /* background-color: red; */
+            }
+        </style>
+    </head>
+    <body class="pt-5" style="overflow-x: hidden; padding-bottom: 100px">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#"
+                        ><img
+                            src="./img/logo.svg"
+                            alt=""
+                            width="30"
+                            height="24"
+                            class="d-inline-block align-text-top"
+                        />
+
+                        Vanilla Games</a
+                    >
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="proyectos.html">TOP5 Proyectos</a>                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">A cerca de</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">PROYECTOS</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <img src="./img/avatar.svg" alt="" width="25" />
+                                </a>
+                                <ul class="dropdown-menu me-0" style="left: -100px; width: 100px">
+                                    <li class="text-light text-center p-2">
+                                        <p>user@email.com</p>
+                                    </li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" href="#">Acciónn</a></li>
+                                    <li><a class="dropdown-item" href="#">Otra acción</a></li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <h1 class="mt-5">Nuevo proyecto</h1>
+                <div class="d-flex justify-content-end">
+                    <bottom class="btn btn-outline-secondary mt-5">
+                        <i class="bi bi-arrow-bar-left" style="font-size: 1em"></i>
+                        Volver</bottom
+                    >
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-12 col-md-4 pt-2 mb-3">
+                        <img src="./img/pro.avif" alt="" class="img-fluid" />
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <form action="" class="form">
+                            <label class="form-label" for="nombre"><strong>Nombre: </strong></label>
+                            <input id="nombre" type="text" value="Nombre Autor" class="form-control" />
+
+                            <label class="form-label mt-2" for="descripcion"
+                                ><strong>Descripción: </strong></label
+                            >
+                            <textarea id="descripcion" class="form-control" rows="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, sunt? Recusandae labore at voluptatem tempore incidunt distinctio eaque? Est aspernatur laudantium itaque ullam numquam autem dolor quia amet eum consectetur.</textarea>
+                            <label class="form-label mt-2" for="estado"><strong>Estado: </strong></label>
+                            <select id="estado" class="form-control">
+                                <option value="estado">estado</option>
+                                <option value="otro estado">otro estado</option>
+                            </select>
+                            <label class="form-label mt-2" for="fecha"><strong>Fecha: </strong></label>
+                            <input id="fecha" type="date" class="form-control" value="12/12/2023"/>
+                            <label class="form-label mt-2" for="nombre"><strong>Enlace: </strong></label>
+                            <input id="enlace" type="text" class="form-control" value="http://enlace.com" />
+                            <label class="form-label mt-2" for="nombre"
+                                ><strong>Repositorio: </strong></label
+                            >
+                            <input id="repositorio" type="text" class="form-control" value="user.github.com/123456" />
+                            <input type="submit" class="btn btn-success mt-3" value="Subir proyecto">
+                        </form>
+                    </div>
+                </div>
+                
             </div>
-            <div class="center d-flex col-4 justify-content-center align-items-center">
-                <p>DAW2- Asignatura de proyectos</p>
-            </div>
-            <div class="right d-flex col-4 justify-content-center align-items-center">
-                <p>carrebolaGithub</p>
-            </div>
-        </div>
-    </footer>
-</body>
+        </main>
+        <footer class="">
+            <nav class="navbar bg-secondary fixed-bottom small">
+                <div class="container">
+                    <a class="navbar-brand" href="http://www.fpllefia.com">
+                        <img
+                            src="./img/logo.svg"
+                            alt="fpllefia"
+                            width="30"
+                            height="24"
+                            class="d-inline-block align-text-top"
+                        />
+                        FPLlefià
+                    </a>
+                    <span class="navbar-text">@Texto de header</span>
+                    <a href="#" class="nav-link">Vínculo header</a>
+                </div>
+            </nav>
+        </footer>
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
